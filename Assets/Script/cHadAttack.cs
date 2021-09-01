@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cHadAttack : MonoBehaviour
+public sealed class cHadAttack : MonoBehaviour
 {
     float attack = 1;
     void OnTriggerEnter(Collider other)

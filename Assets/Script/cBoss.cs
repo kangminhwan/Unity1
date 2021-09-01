@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class cBoss : MonoBehaviour
+public  class cBoss : MonoBehaviour
 {
     public BoxCollider LHandCol;
     public BoxCollider RHandCol;

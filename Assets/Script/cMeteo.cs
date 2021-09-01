@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cMeteo : MonoBehaviour
+public sealed class cMeteo : MonoBehaviour
 {
     public GameObject Asteroid;
     public GameObject Target;
@@ -30,14 +30,6 @@ public class cMeteo : MonoBehaviour
         TargetPool[dropcount].gameObject.SetActive(true);
         TargetPool[dropcount].GetComponent<cDropTarget>().DropStart(pos.position);
         StartCoroutine(DropWait(pos));
-        //for (int i = 0; i < 20; i++)
-        //{
-        //    AsteroidPool[i].gameObject.SetActive(true);
-        //    AsteroidPool[i].GetComponent<cAsteroid>().DropStart(pos);
-        //    StartCoroutine(DropWait());
-
-
-        //}
 
     }
     IEnumerator DropWait(Transform pos)
@@ -59,14 +51,10 @@ public class cMeteo : MonoBehaviour
     {
         GameObject MemoryPools = new GameObject("Memorys");
        
-        //부모 오브젝트생성(하이어라키에서 관리가 용이)
-        
+        //부모 오브젝트생성
         for (int i = 0; i < DropMax; i++)
         {
-           
-           // GameObject obj = Instantiate(Asteroid, new Vector3(0,0,0),Quaternion.identity);
             GameObject obj = Instantiate(Asteroid, MemoryPools.transform);
-
             //유성 생성
             obj.name = "Asteroid_" + i.ToString("00");
             //이름 변경
@@ -80,7 +68,7 @@ public class cMeteo : MonoBehaviour
         {
 
             GameObject obj = Instantiate(Target, new Vector3(0, 0, 0), Quaternion.identity);
-            //유성 생성
+            //타겟 생성
             obj.name = "Target_" + i.ToString("00");
             //이름 변경
             obj.SetActive(false);

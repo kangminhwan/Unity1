@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cAlpha : MonoBehaviour
+public sealed class cAlpha : MonoBehaviour
 {
 
     public Transform Player;
@@ -46,7 +46,7 @@ public class cAlpha : MonoBehaviour
 
 
 
-        // 반투명했던거 다시 월래 쉐이더로 복귀
+        // 반투명했던거 다시 기존 쉐이더로 복귀
         if (Lst_TransparentedRenderer.Count > 0)
         {
             for (int i = 0; i < Lst_TransparentedRenderer.Count; i++)

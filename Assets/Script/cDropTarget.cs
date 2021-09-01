@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cDropTarget : MonoBehaviour
+public sealed class cDropTarget : MonoBehaviour
 {
 
     public Transform trans;

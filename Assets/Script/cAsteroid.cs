@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cAsteroid : MonoBehaviour
+public sealed  class cAsteroid : MonoBehaviour
 {
     public GameObject targetImg;
     public Transform trans;
